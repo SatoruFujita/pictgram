@@ -111,6 +111,10 @@ h2 {
   padding-top: 120px;
 }
 
+.comment-new-wrapper{
+  padding-top: 120px;
+}
+
 .topic-index-wrapper{
   padding-top: 70px;
   background-color: #fafafa;
@@ -141,6 +145,24 @@ h2 {
       width: 35px;
       height: 30px;
       margin-left: 20px;
+    }
+
+    .topic-index-icon-red{
+      width: 35px;
+      height: 30px;
+      margin-left: 20px;
+      background-color: red;
+    }
+
+    .comment-title{
+      padding-right: 20px;
+      padding-left: 20px;
+      font-size: 20px;
+    }
+
+    .comment-text{
+      padding-right: 20px;
+      padding-left: 20px;
     }
   }
 }

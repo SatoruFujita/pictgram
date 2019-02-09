@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'sessions/new'
   root 'pages#index'
   get 'pages/help'
+  get 'comments/new' 
 
   get '/login', to: 'sessions#new'
   post '/login', to:'sessions#create'
@@ -10,7 +11,11 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :users
   resources :topics
+  resources :comments
 
   get 'favorites/index'
   post '/favorites', to: 'favorites#create'
+
+#  get 'comments/index'
+#  post '/comments', to: 'comments#create'
 end
