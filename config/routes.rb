@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'sessions/new'
   root 'pages#index'
   get 'pages/help'
-  get 'comments/new' 
+  get 'comments/new' ,:to => 'comments#new'
 
   get '/login', to: 'sessions#new'
   post '/login', to:'sessions#create'
@@ -15,7 +15,6 @@ Rails.application.routes.draw do
 
   get 'favorites/index'
   post '/favorites', to: 'favorites#create'
+  delete '/favorites', to:'favorites#destroy'
 
-#  get 'comments/index'
-#  post '/comments', to: 'comments#create'
 end

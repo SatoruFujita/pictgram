@@ -2,6 +2,8 @@ class ImageUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
+  include CarrierWave::Magic
+  process :set_magic_content_type => [true]
 
   # Choose what kind of storage to use for this uploader:
   storage :file
@@ -14,9 +16,10 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
   #jpg,jpeg,pngしか許可しない
-  def extension_whitelist
-    %w(jpg jpeg png)
-  end
+#  def extension_whitelist
+#    %w(jpg jpeg png)
+#  end
+
 
   #サイズ制限のバリデーション
   def size_range
